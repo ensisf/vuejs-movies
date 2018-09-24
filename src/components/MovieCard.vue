@@ -100,7 +100,7 @@ export default {
     z-index: 5;
   }
 
-  &__release{
+  &__release {
     display: block;
     padding: 10px 0;
   }

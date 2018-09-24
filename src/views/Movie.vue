@@ -92,7 +92,6 @@ export default {
         .catch(err => console.log(err))
     },
     loadData() {
-      // document.documentElement.scrollTop = 0
       // reset old movie
       this.movie = null
       this.similar = []

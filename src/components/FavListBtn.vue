@@ -63,7 +63,7 @@ export default {
   color: #28a745;
   cursor: pointer;
 
-  &__icon{
+  &__icon {
     width: 20px;
     height: 20px;
     margin: 0 auto;

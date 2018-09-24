@@ -1,6 +1,13 @@
 <template lang="pug">
   #app
     .container
+      .text-right(
+        v-if="!loggedIn"
+      )
+        button.btn.btn-primary.mb-2(
+          type="button"
+          @click="openModal"
+        ) Sign in
       Modal
       header.header.navbar.navbar-light.bg-light               
           router-link.navbar-brand.header__logo(
@@ -12,11 +19,6 @@
               height="50"
             )          
           Search.header__search
-          button.btn.btn-primary.ml-2(
-            type="button"
-            v-if="!loggedIn"
-            @click="openModal"
-          ) Sign in
       router-view
     transition(
       name="fade"
