@@ -5,10 +5,17 @@
     @click="toggleMovie"
     :data-tooltip="tooltip"
   )
-    Icon(
-      width="30"
-      height="30"
+    Icon.fav-btn__icon(
+      v-if="!inFavList"
+      width="20"
+      height="20"
       iconName="icon-heart"
+    )
+    Icon.fav-btn__icon(
+      v-else
+      width="20"
+      height="20"
+      iconName="icon-heart-filled"
     )
 </template>
 <script>
@@ -45,14 +52,27 @@ export default {
 
 <style lang="scss">
 .fav-btn {
-  background: #fff;
-  border: none;
-  padding: 5px;
+  $this: &;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  padding: 8px 8px 6px 8px;
   transition: 0.2s;
   color: #28a745;
   cursor: pointer;
 
+  &__icon{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    color: #fff;
+  }
+
   &.canRemove {
+    border-color: #721c24;
+    background: #721c24;
     color: #721c24;
   }
 }

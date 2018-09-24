@@ -13,6 +13,8 @@
         router-link(
           :to="'/movie/' + movie.id"
         ) {{ movie.title }}
+      i.movie-card__release Release date: 
+        b {{ movie.release_date }}
       p.card-text {{ excerpt }}
       p.genres
         router-link(
@@ -96,6 +98,11 @@ export default {
     top: 5px;
     right: 5px;
     z-index: 5;
+  }
+
+  &__release{
+    display: block;
+    padding: 10px 0;
   }
 
   &__title {
