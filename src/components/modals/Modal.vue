@@ -25,10 +25,11 @@
             )
               span &times;
           .modal-body
-            component(
-              :is="currentFrom"
-              @closeModal="toggleModal"
-            )
+            keep-alive
+              component(
+                :is="currentFrom"
+                @closeModal="toggleModal"
+              )
             
     .modal-backdrop.hid.fade(
       ref="backdrop"
